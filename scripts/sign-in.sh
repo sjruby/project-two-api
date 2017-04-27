@@ -15,3 +15,12 @@ curl "${API}${URL_PATH}" \
   }'
 
 echo
+
+curl --include --request POST https://tiler-wdi-p2.herokuapp.com/sign-in \
+  --header "Content-Type: application/json" \
+  --data '{
+    "credentials": {
+      "email": "samueljosephruby@gmail.com",
+      "password": "test"
+    }
+  }'
