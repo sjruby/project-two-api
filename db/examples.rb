@@ -19,20 +19,21 @@
 # end
 
 Board.create([
-                { title: 'My first BOARD' }
+                { title: 'My first BOARD' ,
+                  cells: '[{x_cord:0, y_cord:0, value:1},{x_cord:0,y_cord:1,value:2}]'}
              ])
 
-Cell.create([
-                { x_cord: 0,
-                  y_cord: 0,
-                  value: 1,
-                  board_id: 1},
-                  { x_cord: 0,
-                    y_cord: 1,
-                    value: 2,
-                    board_id: 1},
-                    { x_cord: 0,
-                      y_cord: 2,
-                      value: 1,
-                      board_id: 1 }
-              ])
+# Cell.create([
+#                 { x_cord: 0,
+#                   y_cord: 0,
+#                   value: 1,
+#                   board_id: 1},
+#                   { x_cord: 0,
+#                     y_cord: 1,
+#                     value: 2,
+#                     board_id: 1},
+#                     { x_cord: 0,
+#                       y_cord: 2,
+#                       value: 1,
+#                       board_id: 1 }
+#               ])

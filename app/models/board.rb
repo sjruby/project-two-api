@@ -1,3 +1,3 @@
 class Board < ApplicationRecord
-  has_many :cells
+  serialize :cells
 end

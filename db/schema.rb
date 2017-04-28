@@ -10,25 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170427194840) do
+ActiveRecord::Schema.define(version: 20170427214806) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "boards", force: :cascade do |t|
     t.string   "title"
+    t.string   "cells"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "cells", force: :cascade do |t|
-    t.integer  "x_cord"
-    t.integer  "y_cord"
-    t.integer  "value"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "board_id"
-    t.index ["board_id"], name: "index_cells_on_board_id", using: :btree
   end
 
   create_table "examples", force: :cascade do |t|
@@ -49,6 +40,5 @@ ActiveRecord::Schema.define(version: 20170427194840) do
     t.index ["token"], name: "index_users_on_token", unique: true, using: :btree
   end
 
-  add_foreign_key "cells", "boards"
   add_foreign_key "examples", "users"
 end
